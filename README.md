@@ -17,3 +17,7 @@ A trimmed example of a MERN stack authentication solution using tokens.
 4. Run `npm run dev:client` in one terminal.
 5. Run `npm run dev:server` in another terminal.
 6. Make your edits and observe the changes!
+
+# Tip Jar
+
+If this helped, please consider dropping a tip at https://ko-fi.com/lazyriverprogramming
