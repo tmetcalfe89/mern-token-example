@@ -34,7 +34,6 @@ app.use(express.json());
 // A helpful piece of middleware to populate req.user with the currently logged-in user on the incoming request.
 app.use((req, res, next) => {
   const authToken = req.headers.authorization;
-  console.log(req.headers);
   if (authToken != undefined) {
     const tokenUser = tokens[authToken];
     if (tokenUser != undefined && tokenUser.expires > Date.now()) {
@@ -76,8 +75,9 @@ app.get("/api/users", (req, res) => {
   res.sendStatus(403);
 });
 
+app.use(express.static(path.join(__dirname, "../client/dist")))
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist"));
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 app.listen(PORT);
