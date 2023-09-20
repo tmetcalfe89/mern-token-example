@@ -1,0 +1,14 @@
+{
+  "name": "mern-token-example",
+  "version": "1.0.0",
+  "description": "A trimmed-down example of how to use a token authorization system with MERN stack",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start": "cd server && npm run start",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install && cd ../server && npm install"
+  },
+  "author": "Timothy Metcalfe",
+  "license": "MIT"
+}
